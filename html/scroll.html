@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effects</title>
+    <link rel="Stylesheet" href="../css/scroll.css">
+</head>
+<body>
+  <section class="zoom">
+<img src="../photos/mountain1.png" id="layer1">
+<img src="../photos/mountain2.png" id="layer2">
+<img src="..//photos/2.jpg" id="text">
+   </section>
+  <section class="content">
+      <h1> - One Last Time -</h1>
+        <p>A very Happy Birthday Once again!!....You're 46...सर्व गुन्हे माफ होणारे जगातील एकमेव ठिकाण म्हणजे – आईचे हृदय
+
+        </p>
+     </section>  
+        
+    <script type="text/javascript">
+
+        var layer1 = document.getElementById('layer1')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll',function(){
+           var offset = window.pageYOffset;
+            scroll = offset;
+            layer1.style.width = (100 + scroll/10) + '%';
+        });
+
+        var layer2 = document.getElementById('layer2')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll',function(){
+           /* var offset = window.pageYOffset;
+            scroll = offset;*/
+            layer2.style.width = (100 + scroll/10) + '%';
+            layer2.style.left = scroll/60 + '%';
+        });
+
+        var text = document.getElementById('text')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll',function(){
+           /* var offset = window.pageYOffset;
+            scroll = offset;*/
+            text.style.top = - scroll/10 + '%';
+        });
+
+
+
+        </script>
+</body>
+</html>
